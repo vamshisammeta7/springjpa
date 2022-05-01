@@ -34,4 +34,14 @@ public class StudentServiceImpl implements StudentService {
     public List<Student> getStudentByNameStartingWith(String name) {
         return studentRepository.findByFirstNameStartingWith(name);
     }
+
+    @Override
+    public List<Student> getStudentByEmailId(String mailId) {
+        return studentRepository.findByEmailId(mailId);
+    }
+
+    @Override
+    public int updateStudent(String firstName, String lastName) {
+        return studentRepository.updateStudentNameByFirstName(lastName,firstName);
+    }
 }

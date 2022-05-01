@@ -75,7 +75,7 @@ class SpringJpaApplicationTests {
 	@Test
 	public void updateStudentName(){
 
-		studentRepository.updateStudentNameByFirstName("diddige","vivek");
+		studentRepository.updateStudentNameByFirstName("vamshi","krishna");
 	}
 }
 

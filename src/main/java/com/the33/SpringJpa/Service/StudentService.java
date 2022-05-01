@@ -15,4 +15,8 @@ public interface StudentService {
     List<Student> getStudentByName(String firstName);
 
     List<Student> getStudentByNameStartingWith(String name);
+
+    List<Student> getStudentByEmailId(String mailId);
+
+    int updateStudent(String firstName, String lastName);
 }

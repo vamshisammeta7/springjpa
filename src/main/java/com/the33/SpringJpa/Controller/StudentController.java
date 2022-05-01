@@ -40,6 +40,16 @@ public class StudentController {
         return studentservice.getStudentByNameStartingWith(name);
     }
 
+    @GetMapping("/students/mail/{mailId}")
+    public List<Student> getStudentByEmailId(@PathVariable("mailId") String mailId){
+        return studentservice.getStudentByEmailId(mailId);
+    }
+
+    @PutMapping("/students/{lastname}")
+    public int updateStudent(@PathVariable("lastname") String lastName,@RequestBody String firstName){
+        return studentservice.updateStudent(firstName,lastName);
+    }
+
 
 
 }

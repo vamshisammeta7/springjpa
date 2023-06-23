@@ -30,7 +30,7 @@ public class StudentController {
 		return "Greetings from Spring Boot!";
 	}
 
-    `
+    
     @GetMapping("/students")
     public List<Student> getStudents(){
 

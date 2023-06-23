@@ -17,12 +17,20 @@ public class StudentController {
 
     @PostMapping("/student")
     public Student saveStudent(@RequestBody Student student){
-
+        public String index() {
+		return "Greetings from Spring Boot!";
+	}
         return studentservice.saveStudent(student);
 
 
     }
 
+    @GetMapping("/")
+	public String index() {
+		return "Greetings from Spring Boot!";
+	}
+
+    `
     @GetMapping("/students")
     public List<Student> getStudents(){
 

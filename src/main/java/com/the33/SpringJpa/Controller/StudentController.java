@@ -17,14 +17,13 @@ public class StudentController {
 
     @PostMapping("/student")
     public Student saveStudent(@RequestBody Student student){
-        public String index() {
-		return "Greetings from Spring Boot!";
-	}
+    
         return studentservice.saveStudent(student);
 
 
     }
 
+    
     @GetMapping("/")
 	public String index() {
 		return "Greetings from Spring Boot!";
@@ -34,6 +33,7 @@ public class StudentController {
     @GetMapping("/students")
     public List<Student> getStudents(){
 
+    	
       return   studentservice.getStudents();
 
     }
@@ -56,6 +56,12 @@ public class StudentController {
     @PutMapping("/students/{lastname}")
     public int updateStudent(@PathVariable("lastname") String lastName,@RequestBody String firstName){
         return studentservice.updateStudent(firstName,lastName);
+    }
+
+    @DeleteMapping("/students/{Id}")
+    public String removeStudentById(@PathVariable("Id") Student student){
+        studentservice.removeStudentById(student);
+        return "removal success";
     }
 
 

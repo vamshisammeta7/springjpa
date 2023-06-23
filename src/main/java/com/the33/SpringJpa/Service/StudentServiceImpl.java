@@ -44,4 +44,9 @@ public class StudentServiceImpl implements StudentService {
     public int updateStudent(String firstName, String lastName) {
         return studentRepository.updateStudentNameByFirstName(lastName,firstName);
     }
+
+    @Override
+    public void removeStudentById(Student student) {
+        studentRepository.delete(student);
+    }
 }

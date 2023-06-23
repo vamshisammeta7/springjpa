@@ -19,4 +19,6 @@ public interface StudentService {
     List<Student> getStudentByEmailId(String mailId);
 
     int updateStudent(String firstName, String lastName);
+
+    void removeStudentById(Student student);
 }
